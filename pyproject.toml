@@ -1,0 +1,28 @@
+[project]
+name = "fritzconnection"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "loeschzwerg", email = "git@loeschzwerg.dev" }]
+requires-python = ">=3.11"
+dependencies = ["requests>=2.34.2"]
+
+[dependency-groups]
+dev = [
+    "nox>=2026.4.10",
+]
+qr = ["segno>=1.6.6"]
+
+[project.scripts]
+fritzconnection = "fritzconnection.cli.fritzinspection:main"
+fritzcall = "fritzconnection.cli.fritzcall:main"
+fritzhomeauto = "fritzconnection.cli.fritzhomeauto:main"
+fritzhosts = "fritzconnection.cli.fritzhosts:main"
+fritzmonitor = "fritzconnection.cli.fritzmonitor:main"
+fritzphonebook = "fritzconnection.cli.fritzphonebook:main"
+fritzstatus = "fritzconnection.cli.fritzstatus:main"
+fritzwlan = "fritzconnection.cli.fritzwlan:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
